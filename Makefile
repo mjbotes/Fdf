@@ -12,7 +12,7 @@ HEADER = incl
 SRC_PATH  = srcs
 
 ### SOURCES ###
-SOURCES = main.c ft_point.c exit.c
+SOURCES = main.c ft_point.c exit.c ft_draw.c
 
 ### OBJECTS ###
 
