@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_multiply_m.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotes <mbotes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/20 13:02:48 by mbotes            #+#    #+#             */
-/*   Updated: 2019/08/21 13:36:04 by mbotes           ###   ########.fr       */
+/*   Created: 2019/08/21 13:00:07 by mbotes            #+#    #+#             */
+/*   Updated: 2019/08/21 13:16:19 by mbotes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/fdf.h"
 
-int		main(int ac, char **av)
+void	ft_multiply_m(t_point *p, float mat[4][4])
 {
-	t_env	env;
-	t_point	*p;
-	int		fd;
-
-	env.mlx_ptr = mlx_init();
-	env.w_ptr = mlx_new_window(env.mlx_ptr, 1000, 1000, "FDF");
-	fd = open(av[ac - 1], O_RDONLY);
-	p = ft_init(fd, env);
-	ft_rotate_x(p);
-	ft_draw_links(env, p);
-	mlx_hook(env.w_ptr, 17, 0, fdf_exit, &env);
-	mlx_hook(env.w_ptr, 2, 0, fdf_key, &env);
-	mlx_loop(env.mlx_ptr);
-	
+	p->p_x = p->x * mat[0][0] + p->y * mat[1][0] + p->z * mat[2][0] +
+		p->w * mat[3][0];
+	p->p_y = p->x * mat[0][1] + p->y * mat[1][1] + p->z * mat[2][1] +
+		p->w * mat[3][1];
+	p->p_z = p->x * mat[0][2] + p->y * mat[1][2] + p->z * mat[2][2] +
+		p->w * mat[3][2];
+	p->p_w = p->x * mat[0][3] + p->y * mat[1][3] + p->z * mat[2][3] +
+		p->w * mat[3][3];
 }
