@@ -39,7 +39,7 @@ all: tmp $(NAME)
 $(NAME): $(OBJS)
 	@echo "$(GREEN)Creating lib files$(CYAN)"
 	@make -C $(LIBFT)
-	@$(CC) $(FLAGS) -L $(LIBFT) -lft -o $@ $^ -framework OpenGL -framework AppKit -lmlx -L
+	@$(CC) $(FLAGS) -g -L $(LIBFT) -lft -o $@ $^ -framework OpenGL -framework AppKit -lmlx -L
 	@echo "$(GREEN)Project successfully compiled"
 
 tmp:

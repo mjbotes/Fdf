@@ -6,7 +6,7 @@
 /*   By: mbotes <mbotes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 13:22:51 by mbotes            #+#    #+#             */
-/*   Updated: 2019/08/21 13:33:16 by mbotes           ###   ########.fr       */
+/*   Updated: 2019/08/23 15:30:13 by mbotes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ t_point	*ft_makepoint(int x, int y, int z)
 	new->w = 1;
 	new->p_x = x;
 	new->p_y = y;
+	new->p_z = z;
+	new->p_w = 1;
 	new->right = NULL;
 	new->down = NULL;
 	return (new);
