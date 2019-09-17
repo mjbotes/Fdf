@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isnumber.c                                      :+:      :+:    :+:   */
+/*   ft_free_her.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbotes <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mbotes <mbotes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/12 15:16:03 by mbotes            #+#    #+#             */
-/*   Updated: 2019/08/13 13:59:27 by mbotes           ###   ########.fr       */
+/*   Created: 2019/09/11 13:28:15 by mbotes            #+#    #+#             */
+/*   Updated: 2019/09/11 13:29:17 by mbotes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isnumber(char *str)
+void	ft_free_her(char **str)
 {
-	if (*str == '-')
-		str++;
-	while (*str != '\0')
-	{
-		if (!(ft_isdigit(*str)))
-			return (0);
-		str++;
-	}
-	return (1);
+	int	i;
+
+	i = 0;
+	while (str[i])
+		ft_strdel(&str[i++]);
+	free(str);
 }

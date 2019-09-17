@@ -6,44 +6,11 @@
 /*   By: mbotes <mbotes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 15:32:54 by mbotes            #+#    #+#             */
-/*   Updated: 2019/08/26 14:14:28 by mbotes           ###   ########.fr       */
+/*   Updated: 2019/09/13 10:54:25 by mbotes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/fdf.h"
-
-t_point	*ft_init(int fd, t_env *env)
-{
-	char	**arr;
-	char	*str;
-	int		loop;
-	int		y;
-	t_point	*list;
-
-	y = 0;
-	env->w = 0;
-	list = NULL;
-	while (get_next_line(fd, &str) == 1)
-	{
-		loop = -1;
-		arr = ft_strsplit(str, ' ');
-		while (arr[++loop] != NULL)
-		{
-			ft_appendlist(loop, y, ft_atoi(arr[loop]), &list);
-		}
-		if (loop > env->w)
-			env->w = loop;
-		y++;
-	}
-	env->h = y;
-	return (list);
-}
-
-void	ft_fix(t_env env, t_point *ptr)
-{
-	ptr->p_x = ptr->x - env.w / 2;
-	ptr->p_y = ptr->y - env.h / 2;
-}
 
 void	ft_draw_links(t_env env, t_point *ptr)
 {

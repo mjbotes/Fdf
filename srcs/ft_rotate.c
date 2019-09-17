@@ -6,7 +6,7 @@
 /*   By: mbotes <mbotes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/21 13:09:50 by mbotes            #+#    #+#             */
-/*   Updated: 2019/08/26 09:09:09 by mbotes           ###   ########.fr       */
+/*   Updated: 2019/09/13 12:07:31 by mbotes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	ft_rotate(t_env env, t_point *p)
 		p->p_y = p->y;
 		p->p_z = p->z;
 		ft_fix(env, p);
-		ft_rotate_p_z(p, env.rot_z * (M_PI / 180.0));
-		ft_rotate_p_y(p, env.rot_y * (M_PI / 180.0));
 		ft_rotate_p_x(p, env.rot_x * (M_PI / 180.0));
+		ft_rotate_p_y(p, env.rot_y * (M_PI / 180.0));
+		ft_rotate_p_z(p, env.rot_z * (M_PI / 180.0));
 		p->p_x *= env.scale;
 		p->p_y *= env.scale;
 		if (p != NULL && p->right != NULL)

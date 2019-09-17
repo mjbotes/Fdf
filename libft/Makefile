@@ -8,7 +8,7 @@ SRCS = 	ft_isalnum.c ft_itoa.c ft_memdel.c ft_putnbr.c ft_strclr.c ft_striter.c 
 		ft_bzero.c ft_iswhitespace.c ft_memcpy.c ft_putendl_fd.c ft_strchr.c ft_strequ.c ft_strmap.c ft_strnew.c ft_strtrim.c \
 		ft_memmove.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c ft_strndup.c ft_lstpushback.c\
 		ft_strdupdel.c ft_replacechr.c ft_makeupper.c ft_itoa_base.c ft_utoa.c ft_remnchars.c \
-		get_next_line.c ft_isnumber.c
+		get_next_line.c ft_isnumber.c ft_free_her.c
 
 OBJECTS =	ft_isalnum.o ft_itoa.o ft_memdel.o ft_putnbr.o ft_strclr.o ft_striter.o ft_strmapi.o ft_strnstr.o ft_tolower.o\
 			ft_isalpha.o ft_memalloc.o ft_memset.o ft_putnbr_fd.o ft_strcmp.o ft_striteri.o ft_strncat.o ft_strrchr.o ft_toupper.o\
@@ -18,7 +18,7 @@ OBJECTS =	ft_isalnum.o ft_itoa.o ft_memdel.o ft_putnbr.o ft_strclr.o ft_striter.
 			ft_bzero.o ft_iswhitespace.o ft_memcpy.o ft_putendl_fd.o ft_strchr.o ft_strequ.o ft_strmap.o ft_strnew.o ft_strtrim.o\
 			ft_memmove.o ft_lstadd.o ft_lstdel.o ft_lstdelone.o ft_lstiter.o ft_lstmap.o ft_lstnew.o ft_strndup.o ft_lstpushback.o\
 			ft_strdupdel.o ft_replacechr.o ft_makeupper.o ft_itoa_base.o ft_utoa.o ft_remnchars.o \
-			get_next_line.o ft_isnumber.o
+			get_next_line.o ft_isnumber.o ft_free_her.o
 
 INCLUDES = libft.h
 

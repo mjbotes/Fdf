@@ -6,7 +6,7 @@
 /*   By: mbotes <mbotes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:33:48 by mbotes            #+#    #+#             */
-/*   Updated: 2019/08/12 15:19:37 by mbotes           ###   ########.fr       */
+/*   Updated: 2019/09/12 14:11:48 by mbotes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
-int					ft_wordcount(char const *s, char c);
+size_t				ft_wordcount(const char *s, char c);
 void				ft_putchar(char c);
 void				ft_putstr(char const *str);
 void				ft_putendl(char const *str);
@@ -77,7 +77,8 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 char				*ft_itoa(intmax_t n);
-int					ft_atoi(const char *str);
+long long			ft_atoi(const char *str);
+void				ft_free_her(char **str);
 
 typedef struct		s_list
 {
